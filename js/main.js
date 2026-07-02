@@ -73,37 +73,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // ============================
-    // CARD ANIMATION ON SCROLL (simple)
-    // ============================
-    const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
-    });
-
-    // ============================
-    // WHATSAPP FLOATING BUTTON (optional)
-    // ============================
-    // If you want a floating WhatsApp button, uncomment below.
-    // const whatsappBtn = document.createElement('a');
-    // whatsappBtn.href = 'https://wa.me/27646517789';
-    // whatsappBtn.target = '_blank';
-    // whatsappBtn.rel = 'noopener noreferrer';
-    // whatsappBtn.className = 'whatsapp-float';
-    // whatsappBtn.setAttribute('aria-label', 'Chat on WhatsApp');
-    // whatsappBtn.innerHTML = '💬';
-    // document.body.appendChild(whatsappBtn);
 });
