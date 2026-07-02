@@ -260,3 +260,25 @@ nav ul{
 }
 
 }
+
+/* Active Navigation */
+
+nav a.active{
+
+color:#D4AF37;
+
+font-weight:700;
+
+border-bottom:3px solid #D4AF37;
+
+padding-bottom:5px;
+
+}
+
+/* Smooth hover */
+
+nav a{
+
+transition:0.3s ease;
+
+}
