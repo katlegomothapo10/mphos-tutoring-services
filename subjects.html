@@ -1,198 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Subjects | Mpho's Tutoring Services</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Subjects offered at Mpho's Tutoring Services - Accounting (Grades 10-11), EMS (Grade 9), English (Grades 7-9)." />
+    <title>Subjects | Mpho's Tutoring Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-<header>
-
-<div class="logo">
-<img src="images/logo.png" alt="Logo">
-</div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="subjects.html" class="active">Subjects</a></li>
-
-<li><a href="pricing.html">Pricing</a></li>
-
-<li><a href="policies.html">Policies</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<a href="booking.html" class="book-btn">Book Now</a>
-
-</header>
-
-<section class="page-hero">
-
-<h1>Subjects We Offer</h1>
-
-<p>
-Personalised tutoring designed to help every learner succeed.
-</p>
-
-</section>
-
-<section class="subjects">
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fas fa-calculator"></i>
-
-<h2>Accounting</h2>
-
-<h4>Grades 10–11</h4>
-
-<p>
-
-Master financial statements, journals, ledgers, cash flow, ethics, budgeting, analysis and exam preparation with personalised support.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-chart-line"></i>
-
-<h2>EMS</h2>
-
-<h4>Grade 9</h4>
-
-<p>
-
-Develop a strong understanding of entrepreneurship, accounting basics, business studies and economics.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-book-open"></i>
-
-<h2>English</h2>
-
-<h4>Grades 7–9</h4>
-
-<p>
-
-Improve grammar, comprehension, literature, writing skills, vocabulary and examination techniques.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="why">
-
-<h2>Every Student Receives</h2>
-
-<div class="why-grid">
-
-<div>
-
-<i class="fas fa-user"></i>
-
-<h3>One-on-One Attention</h3>
-
-<p>Lessons tailored to individual learning needs.</p>
-
-</div>
-
-<div>
-
-<i class="fas fa-book"></i>
-
-<h3>Structured Lessons</h3>
-
-<p>Clear explanations with practical examples.</p>
-
-</div>
-
-<div>
-
-<i class="fas fa-clipboard-check"></i>
-
-<h3>Exam Preparation</h3>
-
-<p>Practice questions and revision techniques.</p>
-
-</div>
-
-<div>
-
-<i class="fas fa-star"></i>
-
-<h3>Confidence Building</h3>
-
-<p>Helping learners enjoy learning again.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<h2>Ready to Improve Your Results?</h2>
-
-<p>
-
-Book your first tutoring session today and start learning with confidence.
-
-</p>
-
-<a href="booking.html" class="hero-button">
-
-Book a Session
-
-</a>
-
-</section>
-
-<footer>
-
-<p>
-
-© 2026 Mpho's Tutoring Services
-
-</p>
-
-</footer>
-
+    <!-- ========== NAVIGATION ========== -->
+    <header role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main Navigation">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Homepage">
+                    <span class="logo-text">Mpho's <span>Tutoring</span></span>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="subjects.html" role="menuitem" class="active" aria-current="page">Subjects</a></li>
+                <li role="none"><a href="pricing.html" role="menuitem">Pricing</a></li>
+                <li role="none"><a href="policies.html" role="menuitem">Policies</a></li>
+                <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                <li role="none" class="nav-cta"><a href="book.html" role="menuitem" class="btn btn-primary">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== SUBJECTS CONTENT ========== -->
+    <main>
+        <section class="section" aria-labelledby="subjects-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">What We Teach</span>
+                    <h1 id="subjects-title">Our Subjects</h1>
+                    <p>Focused, personalised support in key subjects to build understanding and confidence.</p>
+                </div>
+
+                <div class="card-grid subjects-full">
+                    <article class="card subject-card" id="accounting">
+                        <div class="card-icon">📊</div>
+                        <h2>Accounting</h2>
+                        <p class="subject-grade">Grades 10–11</p>
+                        <p>Build a solid foundation in Accounting principles, financial statements, and exam techniques. I help learners understand concepts deeply, not just memorise.</p>
+                        <ul class="subject-details">
+                            <li>✓ Financial statements</li>
+                            <li>✓ Ledger accounts</li>
+                            <li>✓ Trial balance</li>
+                            <li>✓ Exam preparation</li>
+                        </ul>
+                        <a href="book.html" class="btn btn-primary">Book a Session</a>
+                    </article>
+
+                    <article class="card subject-card" id="ems">
+                        <div class="card-icon">📈</div>
+                        <h2>EMS</h2>
+                        <p class="subject-grade">Grade 9</p>
+                        <p>Master Economic and Management Sciences with clear explanations and real-world examples. I help learners connect theory to everyday life.</p>
+                        <ul class="subject-details">
+                            <li>✓ Economics basics</li>
+                            <li>✓ Business concepts</li>
+                            <li>✓ Financial literacy</li>
+                            <li>✓ Exam prep</li>
+                        </ul>
+                        <a href="book.html" class="btn btn-primary">Book a Session</a>
+                    </article>
+
+                    <article class="card subject-card" id="english">
+                        <div class="card-icon">📝</div>
+                        <h2>English</h2>
+                        <p class="subject-grade">Grades 7–9</p>
+                        <p>Develop strong reading, writing, and comprehension skills. I focus on grammar, essay structure, and critical analysis to boost overall performance.</p>
+                        <ul class="subject-details">
+                            <li>✓ Grammar & vocabulary</li>
+                            <li>✓ Essay writing</li>
+                            <li>✓ Comprehension</li>
+                            <li>✓ Literature analysis</li>
+                        </ul>
+                        <a href="book.html" class="btn btn-primary">Book a Session</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Mpho's <span>Tutoring</span></span>
+                    <p>Learn. Grow. Succeed.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul role="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="subjects.html">Subjects</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-contact">
+                    <p><a href="mailto:mpho.motloung@icloud.com">mpho.motloung@icloud.com</a></p>
+                    <p><a href="tel:+27691624989">+27 69 162 4989</a></p>
+                    <p><a href="https://wa.me/27646517789" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+                    <p><a href="https://instagram.com/mphos_tutoringservices" target="_blank" rel="noopener noreferrer">@mphos_tutoringservices</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mpho's Tutoring Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
 </body>
-
 </html>
