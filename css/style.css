@@ -34,7 +34,6 @@
     --shadow-lg: 0 12px 40px rgba(26, 42, 58, 0.20);
 
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset */
@@ -197,11 +196,6 @@ ul {
 .btn-large {
     padding: 0.9rem 2.4rem;
     font-size: 1.05rem;
-}
-
-.btn-block {
-    display: block;
-    width: 100%;
 }
 
 /* ============================
@@ -455,11 +449,6 @@ header {
     color: var(--color-gold);
 }
 
-.subject-grade {
-    font-weight: 600;
-    color: var(--color-gold) !important;
-}
-
 /* ============================
    PRICING
    ============================ */
@@ -482,10 +471,6 @@ header {
     border: 2px solid var(--color-gold);
     border-top: 4px solid var(--color-blue-accent);
     background: linear-gradient(180deg, var(--color-white), rgba(201, 168, 76, 0.04));
-}
-
-.pricing-card.featured:hover {
-    border-color: var(--color-gold-light);
 }
 
 .pricing-badge {
@@ -554,10 +539,6 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.pricing-note strong {
-    color: var(--color-navy);
 }
 
 /* ============================
@@ -643,10 +624,6 @@ header {
     line-height: 1.8;
 }
 
-.about-text strong {
-    color: var(--color-navy);
-}
-
 .about-cta {
     display: flex;
     gap: var(--spacing-md);
@@ -724,10 +701,6 @@ header {
     line-height: 1.7;
 }
 
-.policy-card strong {
-    color: var(--color-navy);
-}
-
 .policies-note {
     text-align: center;
     margin-top: var(--spacing-xl);
@@ -737,10 +710,6 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.policies-note a {
-    font-weight: 600;
 }
 
 /* ============================
@@ -1075,11 +1044,6 @@ footer {
         justify-content: center;
         flex-wrap: wrap;
     }
-
-    .footer-contact i {
-        width: auto;
-        margin-right: 0.3rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1242,9 +1206,6 @@ footer {
     border: 0;
 }
 
-/* ============================
-   SCROLLBAR STYLING
-   ============================ */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -1262,9 +1223,6 @@ footer {
     background: var(--color-gold);
 }
 
-/* ============================
-   SELECTION STYLING
-   ============================ */
 ::selection {
     background: var(--color-gold);
     color: var(--color-white);
