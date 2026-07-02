@@ -1,158 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Policies | Mpho's Tutoring Services</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Policies for Mpho's Tutoring Services - Deposits, cancellations, and session guidelines." />
+    <title>Policies | Mpho's Tutoring Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-<header>
-
-<div class="logo">
-<img src="images/logo.png" alt="Logo">
-</div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="subjects.html">Subjects</a></li>
-
-<li><a href="pricing.html">Pricing</a></li>
-
-<li><a href="policies.html" class="active">Policies</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<a href="booking.html" class="book-btn">Book Now</a>
-
-</header>
-
-<section class="page-hero">
-
-<h1>Our Policies</h1>
-
-<p>
-
-Please read our tutoring policies before booking a session.
-
-</p>
-
-</section>
-
-<section class="policy-section">
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fas fa-money-check-alt"></i>
-
-<h3>Booking Deposit</h3>
-
-<p>
-
-A non-refundable deposit of <strong>R50</strong> is required to secure your spot for every standalone session.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-clock"></i>
-
-<h3>Cancellation Policy</h3>
-
-<p>
-
-All cancellations must be made at least <strong>24 hours</strong> before the scheduled lesson.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-calendar-check"></i>
-
-<h3>Tutor Cancellation</h3>
-
-<p>
-
-Should the tutor cancel a lesson, it will be rescheduled at <strong>no extra cost</strong>.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-wifi"></i>
-
-<h3>Online Lessons</h3>
-
-<p>
-
-Students attending online lessons are expected to have a stable internet connection throughout the lesson.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<h2>Questions About Our Policies?</h2>
-
-<p>
-
-Feel free to contact Mpho's Tutoring Services for any clarification before booking.
-
-</p>
-
-<a href="contact.html" class="hero-button">
-
-Contact Us
-
-</a>
-
-</section>
-
-<footer>
-
-<p>
-
-© 2026 Mpho's Tutoring Services
-
-</p>
-
-</footer>
-
+    <!-- ========== NAVIGATION ========== -->
+    <header role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main Navigation">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Homepage">
+                    <span class="logo-text">Mpho's <span>Tutoring</span></span>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="subjects.html" role="menuitem">Subjects</a></li>
+                <li role="none"><a href="pricing.html" role="menuitem">Pricing</a></li>
+                <li role="none"><a href="policies.html" role="menuitem" class="active" aria-current="page">Policies</a></li>
+                <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                <li role="none" class="nav-cta"><a href="book.html" role="menuitem" class="btn btn-primary">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== POLICIES CONTENT ========== -->
+    <main>
+        <section class="section" aria-labelledby="policies-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Guidelines</span>
+                    <h1 id="policies-title">Our Policies</h1>
+                    <p>Clear, fair policies to ensure a smooth and professional tutoring experience.</p>
+                </div>
+
+                <div class="policies-grid">
+                    <article class="card policy-card">
+                        <div class="policy-icon">💰</div>
+                        <h2>Deposit Requirement</h2>
+                        <p>A <strong>R50 non-refundable deposit</strong> is required for all standalone sessions to secure your booking. This deposit is deducted from the session fee.</p>
+                    </article>
+
+                    <article class="card policy-card">
+                        <div class="policy-icon">⏰</div>
+                        <h2>Cancellation Policy</h2>
+                        <p><strong>Cancellations require 24 hours notice.</strong> Late cancellations may forfeit the deposit or session fee. This allows us to offer the time slot to other learners.</p>
+                    </article>
+
+                    <article class="card policy-card">
+                        <div class="policy-icon">🔄</div>
+                        <h2>Tutor Cancellations</h2>
+                        <p>If the tutor needs to cancel for any reason, the session will be <strong>rescheduled at no extra cost</strong> to you. Your learning progress remains our priority.</p>
+                    </article>
+
+                    <article class="card policy-card">
+                        <div class="policy-icon">📶</div>
+                        <h2>Online Sessions</h2>
+                        <p><strong>Online learners require stable internet</strong> and a suitable device for video conferencing. We recommend a quiet space to maximise focus and learning.</p>
+                    </article>
+                </div>
+
+                <div class="policies-note">
+                    <p>Have questions about our policies? <a href="contact.html">Contact us</a> – we're happy to help.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Mpho's <span>Tutoring</span></span>
+                    <p>Learn. Grow. Succeed.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul role="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="subjects.html">Subjects</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-contact">
+                    <p><a href="mailto:mpho.motloung@icloud.com">mpho.motloung@icloud.com</a></p>
+                    <p><a href="tel:+27691624989">+27 69 162 4989</a></p>
+                    <p><a href="https://wa.me/27646517789" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+                    <p><a href="https://instagram.com/mphos_tutoringservices" target="_blank" rel="noopener noreferrer">@mphos_tutoringservices</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mpho's Tutoring Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
 </body>
-
 </html>
