@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Book a tutoring session with Mpho's Tutoring Services. Fill in your details and we'll confirm your session." />
+    <title>Book Now | Mpho's Tutoring Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* Additional booking-specific styles */
+        .booking-section {
+            background: var(--color-white);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .booking-form {
+            max-width: 720px;
+            margin: 0 auto;
+            background: var(--color-cream);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            color: var(--color-navy);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            border: 2px solid var(--color-cream-dark);
+            border-radius: var(--radius-sm);
+            background: var(--color-white);
+            transition: border-color var(--transition);
+            color: var(--color-text);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .form-actions .btn {
+            flex: 1;
+        }
+
+        .whatsapp-helper {
+            text-align: center;
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--color-cream-dark);
+        }
+
+        .whatsapp-helper a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Confirmation */
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: var(--spacing-xl);
+            background: var(--color-white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .confirmation .confirmation-icon {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .confirmation h2 {
+            color: var(--color-navy);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .confirmation p {
+            color: var(--color-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form {
+                padding: var(--spacing-md);
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main Navigation">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Homepage">
+                    <span class="logo-text">Mpho's <span>Tutoring</span></span>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="subjects.html" role="menuitem">Subjects</a></li>
+                <li role="none"><a href="pricing.html" role="menuitem">Pricing</a></li>
+                <li role="none"><a href="policies.html" role="menuitem">Policies</a></li>
+                <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                <li role="none" class="nav-cta"><a href="book.html" role="menuitem" class="btn btn-primary active" aria-current="page">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== BOOKING CONTENT ========== -->
+    <main>
+        <section class="booking-section" aria-labelledby="booking-title">
+            <div class="container">
+
+                <!-- Form -->
+                <div id="booking-form-container">
+                    <div class="section-header">
+                        <span class="section-badge">Book a Session</span>
+                        <h1 id="booking-title">Secure Your Session</h1>
+                        <p>Fill in your details below and I'll confirm your booking within 24 hours.</p>
+                    </div>
+
+                    <form id="bookingForm" class="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <!-- Replace YOUR_FORM_ID with your actual Formspree ID -->
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parentName">Parent / Guardian Name *</label>
+                                <input type="text" id="parentName" name="parentName" required placeholder="e.g. Thabo Mokoena" />
+                            </div>
+                            <div class="form-group">
+                                <label for="studentName">Student Name *</label>
+                                <input type="text" id="studentName" name="studentName" required placeholder="e.g. Lerato Mokoena" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="grade">Grade *</label>
+                                <select id="grade" name="grade" required>
+                                    <option value="">Select grade</option>
+                                    <option value="7">Grade 7</option>
+                                    <option value="8">Grade 8</option>
+                                    <option value="9">Grade 9</option>
+                                    <option value="10">Grade 10</option>
+                                    <option value="11">Grade 11</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select subject</option>
+                                    <option value="Accounting">Accounting (Grade 10-11)</option>
+                                    <option value="EMS">EMS (Grade 9)</option>
+                                    <option value="English">English (Grade 7-9)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sessionType">Session Type *</label>
+                            <select id="sessionType" name="sessionType" required>
+                                <option value="">Select type</option>
+                                <option value="In Person">In Person (1h30, R150)</option>
+                                <option value="Online">Online (1 Hour, R100)</option>
+                                <option value="Monthly Package">Monthly Package (8 sessions, R500)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferredDate">Preferred Date *</label>
+                                <input type="date" id="preferredDate" name="preferredDate" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredTime">Preferred Time *</label>
+                                <input type="time" id="preferredTime" name="preferredTime" required />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="e.g. 082 123 4567" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="e.g. parent@example.com" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="learningGoals">Learning Goals</label>
+                            <textarea id="learningGoals" name="learningGoals" placeholder="What would you like your child to achieve? Any specific areas to focus on?"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalNotes">Additional Notes</label>
+                            <textarea id="additionalNotes" name="additionalNotes" placeholder="Any other information you'd like to share (e.g. learning challenges, preferred days, etc.)"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">Submit Booking</button>
+                            <a href="index.html" class="btn btn-outline btn-large">Cancel</a>
+                        </div>
+
+                        <div class="whatsapp-helper">
+                            <p>Prefer to book via WhatsApp? <a href="https://wa.me/27646517789" target="_blank" rel="noopener noreferrer">💬 Chat with us now</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Confirmation (hidden by default) -->
+                <div id="confirmation" class="confirmation" role="status" aria-live="polite">
+                    <div class="confirmation-icon">✅</div>
+                    <h2>Booking Received!</h2>
+                    <p>Thank you for booking a session with Mpho's Tutoring Services. I'll review your request and confirm your session within 24 hours.</p>
+                    <p>You'll receive a confirmation email shortly.</p>
+                    <div style="margin-top: var(--spacing-md); display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                        <a href="index.html" class="btn btn-primary">Return Home</a>
+                        <a href="https://wa.me/27646517789" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">💬 WhatsApp</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Mpho's <span>Tutoring</span></span>
+                    <p>Learn. Grow. Succeed.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul role="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="subjects.html">Subjects</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-contact">
+                    <p><a href="mailto:mpho.motloung@icloud.com">mpho.motloung@icloud.com</a></p>
+                    <p><a href="tel:+27691624989">+27 69 162 4989</a></p>
+                    <p><a href="https://wa.me/27646517789" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+                    <p><a href="https://instagram.com/mphos_tutoringservices" target="_blank" rel="noopener noreferrer">@mphos_tutoringservices</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mpho's Tutoring Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script>
+        // ============================
+        // BOOKING FORM HANDLING
+        // ============================
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('bookingForm');
+            const formContainer = document.getElementById('booking-form-container');
+            const confirmation = document.getElementById('confirmation');
+
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Show loading state
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Submitting...';
+                    submitBtn.disabled = true;
+
+                    try {
+                        const formData = new FormData(form);
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Hide form, show confirmation
+                            formContainer.style.display = 'none';
+                            confirmation.style.display = 'block';
+
+                            // Scroll to confirmation
+                            confirmation.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    } catch (error) {
+                        alert('There was an error submitting your booking. Please try again or contact us directly via WhatsApp.');
+                        console.error('Form error:', error);
+                    } finally {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }
+                });
+            }
+
+            // Set minimum date for date picker
+            const dateInput = document.getElementById('preferredDate');
+            if (dateInput) {
+                const today = new Date();
+                const yyyy = today.getFullYear();
+                const mm = String(today.getMonth() + 1).padStart(2, '0');
+                const dd = String(today.getDate()).padStart(2, '0');
+                dateInput.setAttribute('min', `${yyyy}-${mm}-${dd}`);
+            }
+        });
+    </script>
+</body>
+</html>
