@@ -10,149 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        .booking-section {
-            background: var(--color-white);
-            padding: var(--spacing-xl) 0;
-        }
-
-        .booking-form {
-            max-width: 720px;
-            margin: 0 auto;
-            background: var(--color-cream);
-            padding: var(--spacing-xl);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.3rem;
-            color: var(--color-navy);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            font-family: var(--font-primary);
-            font-size: 1rem;
-            border: 2px solid var(--color-cream-dark);
-            border-radius: var(--radius-sm);
-            background: var(--color-white);
-            transition: border-color var(--transition);
-            color: var(--color-text);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--color-gold);
-            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-md);
-        }
-
-        .form-actions {
-            display: flex;
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-lg);
-        }
-
-        .form-actions .btn {
-            flex: 1;
-        }
-
-        .whatsapp-helper {
-            text-align: center;
-            margin-top: var(--spacing-lg);
-            padding-top: var(--spacing-md);
-            border-top: 1px solid var(--color-cream-dark);
-        }
-
-        .whatsapp-helper a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-        }
-
-        .confirmation {
-            display: none;
-            text-align: center;
-            padding: var(--spacing-xl);
-            background: var(--color-white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .confirmation .confirmation-icon {
-            font-size: 4rem;
-            margin-bottom: var(--spacing-md);
-            color: var(--color-gold);
-        }
-
-        .confirmation h2 {
-            color: var(--color-navy);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .confirmation p {
-            color: var(--color-gray);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .error-message {
-            display: none;
-            background: #fee;
-            color: #c00;
-            padding: var(--spacing-md);
-            border-radius: var(--radius-sm);
-            margin-bottom: var(--spacing-md);
-            border-left: 4px solid #c00;
-        }
-
-        .error-message.show {
-            display: block;
-        }
-
-        @media (max-width: 600px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .booking-form {
-                padding: var(--spacing-md);
-            }
-
-            .form-actions {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <!-- ========== NAVIGATION ========== -->
     <header role="banner">
         <nav class="nav-container" role="navigation" aria-label="Main Navigation">
             <div class="nav-logo">
@@ -177,9 +37,8 @@
         </nav>
     </header>
 
-    <!-- ========== BOOKING CONTENT ========== -->
     <main>
-        <section class="booking-section" aria-labelledby="booking-title">
+        <section class="section" aria-labelledby="booking-title">
             <div class="container">
 
                 <div id="booking-form-container">
@@ -197,19 +56,19 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="parentName">Parent / Guardian Name *</label>
-                                <input type="text" id="parentName" name="parentName" required placeholder="e.g. Thabo Mokoena" />
+                                <label for="parentName">Parent / Guardian Name <span class="required">*</span></label>
+                                <input type="text" id="parentName" name="Parent Name" required placeholder="e.g. Thabo Mokoena" />
                             </div>
                             <div class="form-group">
-                                <label for="studentName">Student Name *</label>
-                                <input type="text" id="studentName" name="studentName" required placeholder="e.g. Lerato Mokoena" />
+                                <label for="studentName">Student Name <span class="required">*</span></label>
+                                <input type="text" id="studentName" name="Student Name" required placeholder="e.g. Lerato Mokoena" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="grade">Grade *</label>
-                                <select id="grade" name="grade" required>
+                                <label for="grade">Grade <span class="required">*</span></label>
+                                <select id="grade" name="Grade" required>
                                     <option value="">Select grade</option>
                                     <option value="7">Grade 7</option>
                                     <option value="8">Grade 8</option>
@@ -219,8 +78,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Subject *</label>
-                                <select id="subject" name="subject" required>
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <select id="subject" name="Subject" required>
                                     <option value="">Select subject</option>
                                     <option value="Accounting">Accounting (Grade 10-11)</option>
                                     <option value="EMS">EMS (Grade 9)</option>
@@ -230,8 +89,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="sessionType">Session Type *</label>
-                            <select id="sessionType" name="sessionType" required>
+                            <label for="sessionType">Session Type <span class="required">*</span></label>
+                            <select id="sessionType" name="Session Type" required>
                                 <option value="">Select type</option>
                                 <option value="In Person - R150">In Person (1h30, R150)</option>
                                 <option value="Online - R100">Online (1 Hour, R100)</option>
@@ -241,34 +100,34 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="preferredDate">Preferred Date *</label>
-                                <input type="date" id="preferredDate" name="preferredDate" required />
+                                <label for="preferredDate">Preferred Date <span class="required">*</span></label>
+                                <input type="date" id="preferredDate" name="Preferred Date" required />
                             </div>
                             <div class="form-group">
-                                <label for="preferredTime">Preferred Time *</label>
-                                <input type="time" id="preferredTime" name="preferredTime" required />
+                                <label for="preferredTime">Preferred Time <span class="required">*</span></label>
+                                <input type="time" id="preferredTime" name="Preferred Time" required />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="e.g. 082 123 4567" />
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="Phone Number" required placeholder="e.g. 082 123 4567" />
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required placeholder="e.g. parent@example.com" />
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="Email" required placeholder="e.g. parent@example.com" />
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="learningGoals">Learning Goals</label>
-                            <textarea id="learningGoals" name="learningGoals" placeholder="What would you like your child to achieve? Any specific areas to focus on?"></textarea>
+                            <textarea id="learningGoals" name="Learning Goals" placeholder="What would you like your child to achieve? Any specific areas to focus on?"></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="additionalNotes">Additional Notes</label>
-                            <textarea id="additionalNotes" name="additionalNotes" placeholder="Any other information you'd like to share (e.g. learning challenges, preferred days, etc.)"></textarea>
+                            <textarea id="additionalNotes" name="Additional Notes" placeholder="Any other information you'd like to share (e.g. learning challenges, preferred days, etc.)"></textarea>
                         </div>
 
                         <div class="form-actions">
@@ -287,7 +146,7 @@
                     <h2>Booking Received!</h2>
                     <p>Thank you for booking a session with Mpho's Tutoring Services. I'll review your request and confirm your session within 24 hours.</p>
                     <p>You'll receive a confirmation email shortly.</p>
-                    <div style="margin-top: var(--spacing-md); display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                    <div class="confirmation-actions">
                         <a href="index.html" class="btn btn-primary">Return Home</a>
                         <a href="https://wa.me/27646517789" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
@@ -297,7 +156,6 @@
         </section>
     </main>
 
-    <!-- ========== FOOTER ========== -->
     <footer role="contentinfo">
         <div class="container">
             <div class="footer-grid">
@@ -330,14 +188,24 @@
 
     <script src="js/main.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('bookingForm');
             const formContainer = document.getElementById('booking-form-container');
             const confirmation = document.getElementById('confirmation');
             const errorMessage = document.getElementById('errorMessage');
 
+            // Set minimum date for date picker
+            const dateInput = document.getElementById('preferredDate');
+            if (dateInput) {
+                const today = new Date();
+                const yyyy = today.getFullYear();
+                const mm = String(today.getMonth() + 1).padStart(2, '0');
+                const dd = String(today.getDate()).padStart(2, '0');
+                dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
+            }
+
             if (form) {
-                form.addEventListener('submit', async function(e) {
+                form.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
                     // Hide any previous error
@@ -348,47 +216,39 @@
                     submitBtn.textContent = 'Submitting...';
                     submitBtn.disabled = true;
 
-                    try {
-                        const formData = new FormData(form);
-                        
-                        // Add a hidden field to identify the form
-                        formData.append('_subject', 'New Tutoring Booking');
+                    const formData = new FormData(form);
+                    
+                    // Add a subject for the email
+                    formData.append('_subject', 'New Tutoring Booking');
 
-                        const response = await fetch(form.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(function(response) {
+                        return response.json().then(function(data) {
+                            if (response.ok && data.ok) {
+                                formContainer.style.display = 'none';
+                                confirmation.style.display = 'block';
+                                confirmation.scrollIntoView({ behavior: 'smooth' });
+                            } else {
+                                throw new Error('Form submission failed');
                             }
                         });
-
-                        const data = await response.json();
-
-                        if (response.ok && data.ok) {
-                            formContainer.style.display = 'none';
-                            confirmation.style.display = 'block';
-                            confirmation.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                            throw new Error('Form submission failed');
-                        }
-                    } catch (error) {
+                    })
+                    .catch(function(error) {
                         console.error('Form error:', error);
                         errorMessage.classList.add('show');
                         errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    } finally {
+                    })
+                    .finally(function() {
                         submitBtn.textContent = originalText;
                         submitBtn.disabled = false;
-                    }
+                    });
                 });
-            }
-
-            const dateInput = document.getElementById('preferredDate');
-            if (dateInput) {
-                const today = new Date();
-                const yyyy = today.getFullYear();
-                const mm = String(today.getMonth() + 1).padStart(2, '0');
-                const dd = String(today.getDate()).padStart(2, '0');
-                dateInput.setAttribute('min', `${yyyy}-${mm}-${dd}`);
             }
         });
     </script>
